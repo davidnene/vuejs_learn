@@ -25,18 +25,22 @@ export default {
       {
         id: 1,
         text: "Doctors appointment",
+        reminder: false,
       },
       {
         id: 2,
         text: "Teachers appointment",
+        reminder: true,
       },
       {
         id: 3,
         text: "meeting at school",
+        reminder: true,
       },
       {
         id: 4,
         text: "Food shopping",
+        reminder: true,
       },
     ];
   },
