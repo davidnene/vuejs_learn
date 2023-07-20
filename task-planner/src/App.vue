@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <Header title="Task Tracker" />
+    <Header title="Task Planner" />
+    <AddTask @add-task="addTask" />
     <Tasks
       @delete-task="deleteTask"
       :tasks="tasks"
@@ -12,12 +13,14 @@
 <script>
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
+import AddTask from "./components/AddTask";
 
 export default {
   name: "App",
   components: {
     Header,
     Tasks,
+    AddTask,
   },
   data() {
     return {
@@ -25,6 +28,9 @@ export default {
     };
   },
   methods: {
+    addTask(task) {
+      this.tasks = [...this.tasks, task];
+    },
     deleteTask(id) {
       if (confirm("Are you sure?")) {
         this.tasks = this.tasks.filter((task) => task.id !== id);
@@ -42,21 +48,25 @@ export default {
         id: 1,
         text: "Doctors appointment",
         reminder: false,
+        day: "Tuesday - Morning",
       },
       {
         id: 2,
         text: "Teachers appointment",
         reminder: true,
+        day: "Monday - Afternoon",
       },
       {
         id: 3,
         text: "meeting at school",
         reminder: true,
+        day: "Monday - Morning",
       },
       {
         id: 4,
         text: "Food shopping",
         reminder: true,
+        day: "Friday - Evening",
       },
     ];
   },
