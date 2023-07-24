@@ -19,16 +19,10 @@
       "reminder": false
     },
     {
-      "id": 27340,
       "text": "Work Meeting",
       "day": "Monday Night",
-      "reminder": true
-    },
-    {
-      "text": "Date",
-      "day": "Wed",
       "reminder": true,
-      "id": 27341
+      "id": "buYndmj"
     }
   ]
 }
